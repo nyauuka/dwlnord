@@ -24,6 +24,8 @@
 3. ```cd ~/.config/dwl```
 4. ```sudo make clean install```
 5. ```cd - && sudo cp dwlnord/scripts/* /usr/local/bin/```
+6. ```rm -rf dwlnord/```
+7. ```bardwl | dwl``` in tty
 ## PATCHES
 - autostart
 - bar
