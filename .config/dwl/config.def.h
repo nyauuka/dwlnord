@@ -145,12 +145,16 @@ static const char *menucmd[] = {
     "-m", "#ECEFF4",
     NULL
 };
+static const char *zoneshot[] = { "zoneshot", NULL };
+static const char *fscrshot[] = { "scrshot", NULL };
 
 static const Key keys[] = {
 	/* Note that Shift changes certain key codes: 2 -> at, etc. */
 	/* modifier                  key                  function          argument */
 	{ MODKEY,                    XKB_KEY_p,           spawn,            {.v = menucmd} },
 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_Return,      spawn,            {.v = termcmd} },
+	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_s,           spawn,            {.v = zoneshot} },
+	{ 0,                         XKB_KEY_Print,       spawn,            {.v = fscrshot} },
 	{ MODKEY,                    XKB_KEY_b,           togglebar,        {0} },
 	{ MODKEY,                    XKB_KEY_j,           focusstack,       {.i = +1} },
 	{ MODKEY,                    XKB_KEY_k,           focusstack,       {.i = -1} },

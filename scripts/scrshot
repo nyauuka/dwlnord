@@ -1,0 +1,6 @@
+#!/bin/sh
+DIR="$HOME/Pictures/Screenshots"
+mkdir -p "$DIR"
+FILE="$DIR/$(date +%T_%F)'_fullshot.png'"
+grim "$FILE" && wl-copy --type image/png < "$FILE"
+notify-send 'Screenshot' 'Full screenshot in def dir'
